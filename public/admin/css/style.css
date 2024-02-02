@@ -1,0 +1,29 @@
+#login{
+    align-items: center;
+    display: flex;
+    height: 630px;
+}
+#login h2{
+    text-align: center;
+    color: black;
+}
+#header{
+    background: linear-gradient(to right, rgb(214, 242, 7),rgb(76, 65, 179));
+    padding: 15px 0px;
+}
+#header h4{
+    color: black;
+}
+#header button{
+    float: right;
+}
+#mid h2{
+    text-align: center;
+    color: red;
+}
+#mid .bi-trash{
+    font-size: 30px;
+}
+#mid table tr{
+    font-size: 12px;
+}
