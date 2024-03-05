@@ -1,11 +1,11 @@
-const banner = require('../models/banner')
 const Banner= require('../models/banner')
 
 
 exports.bannerpage= async(req,res)=>{
     try{
+    console.log('banner table data is here', Banner)
    const loginname=  req.session.loginname
-   const record= await banner.findOne()
+   const record = await Banner.findOne()
     res.render('admin/banner.ejs',{loginname,record})
     }catch(error){
         console.log(error.message)
@@ -41,6 +41,6 @@ exports.bannerupdate= async(req,res)=>{
     }
 }
 exports.userbannerpage=async(req,res)=>{
-  const record= await banner.findOne()
+  const record= await Banner.findOne()
     res.render('banner.ejs',{record})
 }

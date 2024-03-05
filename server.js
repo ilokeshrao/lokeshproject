@@ -4,9 +4,9 @@ require('dotenv').config()
 app.use(express.urlencoded({extended:false}))
 const userRouter= require('./routers/userrouter')
 const adminRouter= require('./routers/adminrouter')
-const mongoose= require('mongoose')
 const session= require('express-session')
-mongoose.connect(`${process.env.DB_URL}/${process.env.DB_NAME}`)
+const mongoose =require('mongoose')
+mongoose.connect('mongodb://127.0.0.1:27017/backendprojectfirst')
 
 
 

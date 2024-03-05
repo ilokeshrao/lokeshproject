@@ -10,8 +10,4 @@
 
 })
 
-
-
-
-
  module.exports=  mongoose.model('address',addressSchema)
