@@ -44,8 +44,8 @@ const transporter = nodemailer.createTransport({
     secure: false,
     auth: {
       // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-      user: 'lkyadav2311@gmail.com',
-      pass: 'xlnunxbteckodvwo'
+      user: 'l6858729@gmail.com',
+      pass: 'ngwd jurl wvvr mwit'
     }
   });
   console.log('connected to gmail smpt server')

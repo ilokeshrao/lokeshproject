@@ -119,7 +119,7 @@
     margin-right: 20px;
 }
 #footer{
-    background: linear-gradient(to right, rgb(5,15,130),rgb(2,6,61));
+    background: linear-gradient(to right, rgba(208, 211, 212),rgb(9, 10, 10));
     padding-bottom: 20px;
 }
 #footer img{

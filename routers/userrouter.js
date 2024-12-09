@@ -10,7 +10,13 @@ const queryc = require('../controllers/querycontroller')
 const addc = require('../controllers/addcontroller')
 const Add = require('../models/address')
 
-
+function handlecontrol(req,res,next){
+  if(req.session.isAuth){
+      next()
+  }else{
+      res.redirect('/admin')
+  }
+}
 
 
 router.get('/', async (req, res) => {
@@ -27,11 +33,11 @@ router.get('/', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 })
-router.get('/banner', bannerc.userbannerpage)
-router.get('/testadd', testic.testiform)
+router.get('/banner',handlecontrol, bannerc.userbannerpage)
+router.get('/testadd', handlecontrol,testic.testiform)
 router.post('/testadd', upload.single('img'), testic.testiadd)
 router.post('/', queryc.queryadd)
-router.get('/servicedetails/:id', servicec.moredetails)
+router.get('/servicedetails/:id', handlecontrol,servicec.moredetails)
 
 
 module.exports = router

@@ -3,7 +3,7 @@ const Banner= require('../models/banner')
 
 exports.bannerpage= async(req,res)=>{
     try{
-    console.log('banner table data is here', Banner)
+    // console.log('banner table data is here', Banner)
    const loginname=  req.session.loginname
    const record = await Banner.findOne()
     res.render('admin/banner.ejs',{loginname,record})
@@ -15,7 +15,7 @@ exports.bannerform= async(req,res)=>{
     try{
     const id= req.params.id
     const record= await Banner.findById(id)
-    console.log(record)
+    // console.log(record)
    const loginname=  req.session.loginname
     res.render('admin/bannerform.ejs',{loginname,record,message:''})
     }catch(error){
